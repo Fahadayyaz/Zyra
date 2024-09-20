@@ -1,12 +1,24 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function Splash() {
+const Splash = ({ navigation }) => {
   return (
-    <View>
-      <Text>Splash</Text>
+    <View style={styles.container}>
+      <Text>Welcome to the Splash Screen</Text>
+      <Button
+        title="Go to Login"
+        onPress={() => navigation.navigate("Login")} // Home screen par navigate krta hai
+      />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
+
+export default Splash;
