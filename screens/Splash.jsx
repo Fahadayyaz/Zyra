@@ -1,8 +1,10 @@
 import React from "react";
 import { View, StyleSheet, Image, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
-const Splash = () => {
+const Splash = ({ navigation }) => {
   return (
     <View style={styles.mainContainer}>
       <StatusBar style="auto" />
@@ -33,12 +35,31 @@ const Splash = () => {
               fontSize: 14,
               width: "80%",
               textAlign: "center",
-              top: 15,
+              marginTop: "8%",
             }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
           </Text>
+          <TouchableOpacity
+            style={{
+              width: 100,
+              height: 42,
+              backgroundColor: "#fff",
+              borderRadius: 35,
+              alignSelf: "center",
+              marginTop: "6%",
+              justifyContent: "center",
+            }}
+            onPress={() => navigation.navigate("login")} // Add navigation to Login screen
+          >
+            <AntDesign
+              name="arrowright"
+              size={24}
+              color="#92499C"
+              style={{ alignSelf: "center" }}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
