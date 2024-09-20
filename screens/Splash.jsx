@@ -1,23 +1,27 @@
 import React from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
+import { StatusBar } from "expo-status-bar";
 
-const Splash = ({ navigation }) => {
+const Splash = () => {
   return (
-    <View style={styles.container}>
-      <Text>Welcome to the Splash Screen</Text>
-      <Button
-        title="Go to Login"
-        onPress={() => navigation.navigate("Login")} // Home screen par navigate krta hai
-      />
+    <View style={styles.mainContainer}>
+      <StatusBar style="auto" />
+      <View style={styles.contentContainer}></View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#fff",
+  },
+  contentContainer: {},
+  logo: {
+    width: 100,
+    height: 55.42,
+    marginBottom: 20,
   },
 });
 
