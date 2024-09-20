@@ -12,9 +12,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <StatusBar style="auto" />
-      <Stack.Navigator initialRouteName="Splash">
-        <Stack.Screen name="Splash" component={Splash} />
-        <Stack.Screen name="Login" component={Login} />
+      <Stack.Navigator
+        initialRouteName="splash"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="splash" component={Splash} />
+        <Stack.Screen name="login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );
