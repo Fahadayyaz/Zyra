@@ -7,16 +7,9 @@ import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 const Login = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.mainContainer}>
       <StatusBar style="auto" />
-      <View
-        style={{
-          width: "90%",
-          height: "100%",
-          marginTop: "10%",
-          alignSelf: "center",
-        }}
-      >
+      <View style={styles.contentContainer}>
         <Pressable
           style={{
             width: 37,
@@ -291,9 +284,15 @@ const Login = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
     flex: 1,
     backgroundColor: "#f1f1f1",
+  },
+  contentContainer: {
+    width: "90%",
+    height: "100%",
+    marginTop: "10%",
+    alignSelf: "center",
   },
   emailInputContainer: {
     flexDirection: "row",
