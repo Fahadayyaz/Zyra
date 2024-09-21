@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { StatusBar } from "expo-status-bar";
 import { TextInput } from "react-native-gesture-handler";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 const Login = ({ navigation }) => {
   return (
