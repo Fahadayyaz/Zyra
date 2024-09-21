@@ -20,22 +20,23 @@ const Splash = ({ navigation }) => {
         <View style={styles.card}>
           <Text
             style={{
-              alignSelf: "center",
+              fontFamily: "Poppins_SemiBold",
               color: "#fff",
               fontSize: 24,
-              top: 10,
+              alignSelf: "center",
+              marginTop: "10%",
             }}
           >
             Heading Here
           </Text>
           <Text
             style={{
+              fontFamily: "PlusJakartaSans_Regular",
+              textAlign: "center",
               alignSelf: "center",
               color: "#fff",
               fontSize: 14,
-              width: "80%",
-              textAlign: "center",
-              marginTop: "8%",
+              width: "90%",
             }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -48,7 +49,7 @@ const Splash = ({ navigation }) => {
               backgroundColor: "#fff",
               borderRadius: 35,
               alignSelf: "center",
-              marginTop: "6%",
+              marginTop: "5%",
               justifyContent: "center",
             }}
             onPress={() => navigation.navigate("login")} // Add navigation to Login screen
@@ -89,12 +90,12 @@ const styles = StyleSheet.create({
   },
   card: {
     alignSelf: "center",
-    width: "80%",
+    width: "90%",
     borderRadius: 35,
-    height: "25%",
+    height: "28%",
     backgroundColor: "#92499C",
     position: "absolute",
-    top: "66%",
+    top: "64%",
   },
 });
 
