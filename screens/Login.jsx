@@ -194,6 +194,97 @@ const Login = ({ navigation }) => {
             </Text>
           </Pressable>
         </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "15%",
+            marginBottom: "10%",
+          }}
+        >
+          <View style={styles.line} />
+          <Text style={styles.text}>Or</Text>
+          <View style={styles.line} />
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            width: "100%",
+            height: 48,
+            backgroundColor: "#E9E9E9",
+            borderRadius: 8,
+            alignItems: "center",
+            marginTop: 15,
+            paddingLeft: "25%",
+          }}
+        >
+          <View style={styles.socialCircles}>
+            <Image source={require("./../assets/appIcon/facebookIcon.png")} />
+          </View>
+          <Text
+            style={{
+              fontFamily: "PlusJakartaSans_Regular",
+              marginLeft: 10,
+              color: "#7C7C7C",
+              fontSize: 12,
+            }}
+          >
+            Continue with facebook
+          </Text>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            width: "100%",
+            height: 48,
+            backgroundColor: "#E9E9E9",
+            borderRadius: 8,
+            alignItems: "center",
+            marginTop: 15,
+            paddingLeft: "25%",
+          }}
+        >
+          <View style={styles.socialCircles}>
+            <Image source={require("./../assets/appIcon/GoogleIcon.png")} />
+          </View>
+          <Text
+            style={{
+              fontFamily: "PlusJakartaSans_Regular",
+              marginLeft: 10,
+              color: "#7C7C7C",
+              fontSize: 12,
+            }}
+          >
+            Continue with Google
+          </Text>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            width: "100%",
+            height: 48,
+            backgroundColor: "#E9E9E9",
+            borderRadius: 8,
+            alignItems: "center",
+            marginTop: 15,
+            paddingLeft: "25%",
+          }}
+        >
+          <View style={styles.socialCircles}>
+            <Image source={require("./../assets/appIcon/AppleIcon.png")} />
+          </View>
+          <Text
+            style={{
+              fontFamily: "PlusJakartaSans_Regular",
+              marginLeft: 10,
+              color: "#7C7C7C",
+              fontSize: 12,
+            }}
+          >
+            Continue with Apple
+          </Text>
+        </View>
       </View>
     </View>
   );
@@ -237,6 +328,24 @@ const styles = StyleSheet.create({
     borderRadius: 1,
     borderColor: "#D2D2D2",
     marginTop: 2,
+  },
+  line: {
+    flex: 1,
+    height: 1,
+    backgroundColor: "#C7C7C7", // You can change the color as needed
+  },
+  text: {
+    marginHorizontal: 10,
+    fontSize: 16,
+    color: "#C7C7C7", // You can change the text color as needed
+  },
+  socialCircles: {
+    width: 27,
+    height: 27,
+    backgroundColor: "#f5f5f5",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 27,
   },
 });
 
