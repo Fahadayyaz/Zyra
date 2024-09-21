@@ -6,6 +6,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { StatusBar } from "expo-status-bar";
 import Splash from "./screens/Splash";
 import Login from "./screens/Login";
+import SignUp from "./screens/SignUp";
+import ForgotPassword from "./screens/ForgotPassword";
+import CreateNewPassword from "./screens/CreateNewPassword";
+import Home from "./screens/Home";
 
 const Stack = createStackNavigator();
 
@@ -15,6 +19,7 @@ export default function App() {
     Poppins_Medium: require("../Zyra/assets/fonts/Poppins-Medium.ttf"),
     PlusJakartaSans_Regular: require("../Zyra/assets/fonts/PlusJakartaSans-Regular.ttf"),
     PlusJakartaSans_Medium: require("../Zyra/assets/fonts/PlusJakartaSans-Medium.ttf"),
+    PlusJakartaSans_Bold: require("../Zyra/assets/fonts/PlusJakartaSans-Bold.ttf"),
   });
 
   if (!loaded) {
@@ -25,11 +30,15 @@ export default function App() {
     <NavigationContainer>
       <StatusBar style="auto" />
       <Stack.Navigator
-        initialRouteName="login"
+        initialRouteName="Splash"
         screenOptions={{ headerShown: false }}
       >
-        <Stack.Screen name="splash" component={Splash} />
-        <Stack.Screen name="login" component={Login} />
+        <Stack.Screen name="Splash" component={Splash} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+        <Stack.Screen name="CreateNewPassword" component={CreateNewPassword} />
       </Stack.Navigator>
     </NavigationContainer>
   );
