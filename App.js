@@ -30,7 +30,7 @@ export default function App() {
     <NavigationContainer>
       <StatusBar style="auto" />
       <Stack.Navigator
-        initialRouteName="ForgotPassword"
+        initialRouteName="Login"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Splash" component={Splash} />
