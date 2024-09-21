@@ -12,7 +12,9 @@ const Stack = createStackNavigator();
 export default function App() {
   const [loaded] = useFonts({
     Poppins_SemiBold: require("../Zyra/assets/fonts/Poppins-SemiBold.ttf"),
+    Poppins_Medium: require("../Zyra/assets/fonts/Poppins-Medium.ttf"),
     PlusJakartaSans_Regular: require("../Zyra/assets/fonts/PlusJakartaSans-Regular.ttf"),
+    PlusJakartaSans_Medium: require("../Zyra/assets/fonts/PlusJakartaSans-Medium.ttf"),
   });
 
   if (!loaded) {
