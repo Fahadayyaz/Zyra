@@ -52,7 +52,7 @@ const Splash = ({ navigation }) => {
               marginTop: "5%",
               justifyContent: "center",
             }}
-            onPress={() => navigation.navigate("login")}
+            onPress={() => navigation.navigate("Login")}
           >
             <AntDesign
               name="arrowright"
