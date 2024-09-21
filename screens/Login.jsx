@@ -21,7 +21,7 @@ const Login = ({ navigation }) => {
           style={{
             width: 37,
             height: 35,
-            borderRadius: 6,
+            borderRadius: 8,
             backgroundColor: "#E9E9E9",
             justifyContent: "center",
             alignItems: "center",
@@ -53,7 +53,7 @@ const Login = ({ navigation }) => {
         <View
           style={{
             // backgroundColor: "pink",
-            height: "40%",
+            height: "23%",
             marginTop: "10%",
           }}
         >
@@ -77,7 +77,7 @@ const Login = ({ navigation }) => {
                 width: "100%",
                 height: 48,
                 backgroundColor: "#E9E9E9",
-                borderRadius: 5,
+                borderRadius: 8,
                 paddingLeft: 40,
               }}
             />
@@ -106,7 +106,7 @@ const Login = ({ navigation }) => {
                 width: "100%",
                 height: 48,
                 backgroundColor: "#E9E9E9",
-                borderRadius: 5,
+                borderRadius: 8,
                 paddingLeft: 40,
               }}
             />
@@ -115,7 +115,7 @@ const Login = ({ navigation }) => {
           <View
             style={{
               flexDirection: "row",
-              alignItems: "center",
+              justifyContent: "center",
               marginTop: 8,
             }}
           >
@@ -130,7 +130,10 @@ const Login = ({ navigation }) => {
             >
               Save Password
             </Text>
-            <Pressable style={{ width: "65%", alignItems: "flex-end" }}>
+            <Pressable
+              style={{ width: "65%", alignItems: "flex-end" }}
+              onPress={() => navigation.navigate("ForgotPassword")}
+            >
               <Text
                 style={{
                   color: "#92499C",
@@ -142,6 +145,54 @@ const Login = ({ navigation }) => {
               </Text>
             </Pressable>
           </View>
+        </View>
+        {/* Sign In Button */}
+        <Pressable
+          style={{
+            backgroundColor: "#92499C",
+            width: "100%",
+            height: 48,
+            borderRadius: 8,
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "15%",
+          }}
+          onPress={() => navigation.navigate("Home")}
+        >
+          <Text style={{ color: "#fff", fontFamily: "PlusJakartaSans_Bold" }}>
+            Sign In
+          </Text>
+        </Pressable>
+        {/* don't have an account section */}
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: 10,
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "PlusJakartaSans_Regular",
+              fontSize: 12,
+              color: "#7C7C7C",
+            }}
+          >
+            Don't have an account?
+          </Text>
+          <Pressable>
+            <Text
+              style={{
+                fontFamily: "PlusJakartaSans_Bold",
+                fontSize: 12,
+                color: "#92499C",
+              }}
+              onPress={() => navigation.navigate("SignUp")}
+            >
+              Sign up
+            </Text>
+          </Pressable>
         </View>
       </View>
     </View>
