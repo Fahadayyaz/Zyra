@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { StatusBar } from "expo-status-bar";
 import { TextInput } from "react-native-gesture-handler";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 const Login = ({ navigation }) => {
   return (
@@ -33,7 +34,7 @@ const Login = ({ navigation }) => {
           style={{
             fontFamily: "Poppins_Medium",
             fontSize: 28,
-            marginTop: 3,
+            marginTop: 10,
             color: "#00000",
           }}
         >
@@ -51,7 +52,7 @@ const Login = ({ navigation }) => {
         {/* Email & Password section */}
         <View
           style={{
-            backgroundColor: "pink",
+            // backgroundColor: "pink",
             height: "40%",
             marginTop: "10%",
           }}
@@ -100,6 +101,7 @@ const Login = ({ navigation }) => {
             <TextInput
               placeholder="Enter your password"
               placeholderTextColor="#7C7C7C"
+              secureTextEntry={true}
               style={{
                 width: "100%",
                 height: 48,
@@ -114,20 +116,21 @@ const Login = ({ navigation }) => {
             style={{
               flexDirection: "row",
               alignItems: "center",
-              marginTop: 5,
+              marginTop: 8,
             }}
           >
+            <Pressable style={styles.checkBox}></Pressable>
             <Text
               style={{
                 color: "#7C7C7C",
-
+                marginLeft: 10,
                 fontFamily: "PlusJakartaSans_Regular",
                 fontSize: 12,
               }}
             >
               Save Password
             </Text>
-            <Pressable>
+            <Pressable style={{ width: "65%", alignItems: "flex-end" }}>
               <Text
                 style={{
                   color: "#92499C",
@@ -155,14 +158,14 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 48,
     alignItems: "center",
-    marginTop: 3,
+    marginTop: 5,
   },
   passwordInputContainer: {
     flexDirection: "row",
     width: "100%",
     height: 48,
     alignItems: "center",
-    marginTop: 3,
+    marginTop: 5,
   },
 
   iconCircle: {
@@ -175,6 +178,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     zIndex: 1,
     marginLeft: 5,
+  },
+  checkBox: {
+    width: 14,
+    height: 14,
+    borderWidth: 1,
+    borderRadius: 1,
+    borderColor: "#D2D2D2",
+    marginTop: 2,
   },
 });
 
