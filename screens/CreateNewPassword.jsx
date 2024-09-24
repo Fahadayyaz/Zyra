@@ -60,7 +60,7 @@ const CreateNewPassword = ({ navigation }) => {
             />
           </View>
         </View>
-        {/* Password section goes here */}
+        {/* Create Password section goes here */}
         <Text
           style={{
             fontFamily: "PlusJakartaSans_Medium",
@@ -79,7 +79,7 @@ const CreateNewPassword = ({ navigation }) => {
             />
           </View>
           <TextInput
-            placeholder="Enter your password"
+            placeholder="Create a new password"
             placeholderTextColor="#7C7C7C"
             secureTextEntry={true}
             style={{
@@ -94,6 +94,38 @@ const CreateNewPassword = ({ navigation }) => {
             }}
           />
         </View>
+        {/* Confirm Password goes here */}
+        <Text
+          style={{
+            fontFamily: "PlusJakartaSans_Medium",
+            fontSize: 12,
+            color: "#26252B",
+            marginTop: 15,
+          }}
+        >
+          Confirm Password
+        </Text>
+        <View style={styles.passwordInputContainer}>
+          <View style={styles.iconCircle}>
+            <Image
+              source={require("./../assets/appIcon/LockIcon.png")}
+              style={{ width: 11, height: 14 }}
+            />
+          </View>
+          <TextInput
+            placeholder="Confirm your password"
+            placeholderTextColor="#7C7C7C"
+            secureTextEntry={true}
+            style={{
+              width: "100%",
+              height: 48,
+              backgroundColor: "#E9E9E9",
+              borderRadius: 8,
+              paddingLeft: 40,
+            }}
+          />
+        </View>
+        {/* Next button goes here */}
         <Pressable
           style={{
             backgroundColor: "#92499C",
