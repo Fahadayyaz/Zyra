@@ -66,7 +66,10 @@ const Login = ({ navigation }) => {
           </Text>
           <View style={styles.emailInputContainer}>
             <View style={styles.iconCircle}>
-              <Image source={require("./../assets/appIcon/ReceiverIcon.png")} />
+              <Image
+                source={require("./../assets/appIcon/ReceiverIcon.png")}
+                style={{ width: 12, height: 12 }}
+              />
             </View>
             <TextInput
               placeholder="Enter your email"
@@ -94,7 +97,10 @@ const Login = ({ navigation }) => {
           </Text>
           <View style={styles.passwordInputContainer}>
             <View style={styles.iconCircle}>
-              <Image source={require("./../assets/appIcon/LockIcon.png")} />
+              <Image
+                source={require("./../assets/appIcon/LockIcon.png")}
+                style={{ width: 12, height: 15 }}
+              />
             </View>
             <TextInput
               placeholder="Enter your password"
