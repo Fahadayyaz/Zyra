@@ -68,7 +68,7 @@ const Login = ({ navigation }) => {
             <View style={styles.iconCircle}>
               <Image
                 source={require("./../assets/appIcon/ReceiverIcon.png")}
-                style={{ width: 12, height: 12 }}
+                style={{ width: 11.65, height: 12 }}
               />
             </View>
             <TextInput
@@ -99,7 +99,7 @@ const Login = ({ navigation }) => {
             <View style={styles.iconCircle}>
               <Image
                 source={require("./../assets/appIcon/LockIcon.png")}
-                style={{ width: 12, height: 15 }}
+                style={{ width: 9.82, height: 13.48 }}
               />
             </View>
             <TextInput
