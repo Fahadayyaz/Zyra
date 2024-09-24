@@ -56,7 +56,7 @@ const CreateNewPassword = ({ navigation }) => {
           <View style={[styles.circle, styles.frontCircle]}>
             <Image
               source={require("../assets/appIcon/createPasswordIcon.png")}
-              style={styles.lock}
+              style={{ width: 34.97, height: 35 }}
             />
           </View>
         </View>
@@ -75,7 +75,7 @@ const CreateNewPassword = ({ navigation }) => {
           <View style={styles.iconCircle}>
             <Image
               source={require("./../assets/appIcon/LockIcon.png")}
-              style={{ width: 12, height: 15 }}
+              style={{ width: 9.82, height: 13.48 }}
             />
           </View>
           <TextInput
