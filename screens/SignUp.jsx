@@ -193,7 +193,7 @@ const SignUP = ({ navigation }) => {
                 />
               </View>
               <TextInput
-                placeholder="Enter your password"
+                placeholder="Confirm your password"
                 placeholderTextColor="#7C7C7C"
                 secureTextEntry={true}
                 style={{
