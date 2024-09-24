@@ -240,7 +240,10 @@ const Login = ({ navigation }) => {
           }}
         >
           <View style={styles.socialCircles}>
-            <Image source={require("./../assets/appIcon/facebookIcon.png")} />
+            <Image
+              source={require("./../assets/appIcon/facebookIcon.png")}
+              style={{ width: 6, height: 11.79 }}
+            />
           </View>
           <Text
             style={{
@@ -266,7 +269,10 @@ const Login = ({ navigation }) => {
           }}
         >
           <View style={styles.socialCircles}>
-            <Image source={require("./../assets/appIcon/GoogleIcon.png")} />
+            <Image
+              source={require("./../assets/appIcon/GoogleIcon.png")}
+              style={{ width: 12, height: 12 }}
+            />
           </View>
           <Text
             style={{
@@ -292,7 +298,10 @@ const Login = ({ navigation }) => {
           }}
         >
           <View style={styles.socialCircles}>
-            <Image source={require("./../assets/appIcon/AppleIcon.png")} />
+            <Image
+              source={require("./../assets/appIcon/AppleIcon.png")}
+              style={{ width: 9, height: 11.03 }}
+            />
           </View>
           <Text
             style={{
