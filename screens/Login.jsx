@@ -364,11 +364,9 @@ const styles = StyleSheet.create({
     width: 18,
     height: 18,
     borderWidth: 1,
-    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#f1f1f1",
     borderColor: "#92499C",
-    alignItems: "center",
     borderRadius: 5,
   },
   circleClicked: {
