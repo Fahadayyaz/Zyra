@@ -68,7 +68,7 @@ const SignUP = ({ navigation }) => {
               <View style={styles.iconCircle}>
                 <Image
                   source={require("./../assets/appIcon/ProfileOrNameIcon.png")}
-                  style={{ width: 12, height: 12 }}
+                  style={{ width: 11.36, height: 13.15 }}
                 />
               </View>
               <TextInput
@@ -98,7 +98,7 @@ const SignUP = ({ navigation }) => {
               <View style={styles.iconCircle}>
                 <Image
                   source={require("./../assets/appIcon/mailIcon.png")}
-                  style={{ width: 12, height: 12 }}
+                  style={{ width: 12.25, height: 9.8 }}
                 />
               </View>
               <TextInput
@@ -128,7 +128,7 @@ const SignUP = ({ navigation }) => {
               <View style={styles.iconCircle}>
                 <Image
                   source={require("./../assets/appIcon/ReceiverIcon.png")}
-                  style={{ width: 12, height: 12 }}
+                  style={{ width: 11.65, height: 12 }}
                 />
               </View>
               <TextInput
@@ -158,7 +158,7 @@ const SignUP = ({ navigation }) => {
               <View style={styles.iconCircle}>
                 <Image
                   source={require("./../assets/appIcon/LockIcon.png")}
-                  style={{ width: 11, height: 14 }}
+                  style={{ width: 9.82, height: 13.48 }}
                 />
               </View>
               <TextInput
@@ -249,7 +249,7 @@ const SignUP = ({ navigation }) => {
                   fontSize: 12,
                   color: "#92499C",
                 }}
-                onPress={() => navigation.navigate("SignUp")}
+                onPress={() => navigation.navigate("Login")}
               >
                 Sign In
               </Text>
@@ -341,7 +341,7 @@ const SignUP = ({ navigation }) => {
             <View style={styles.socialCircles}>
               <Image
                 source={require("./../assets/appIcon/AppleIcon.png")}
-                // style={{ width: 9, height: 11.03 }}
+                style={{ width: 9, height: 11.03 }}
               />
             </View>
             <Text
