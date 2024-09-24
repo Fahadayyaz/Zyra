@@ -120,7 +120,7 @@ const Login = ({ navigation }) => {
             style={{
               flexDirection: "row",
               justifyContent: "center",
-              marginTop: 8,
+              marginTop: "5%",
             }}
           >
             <View
