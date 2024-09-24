@@ -80,13 +80,13 @@ const ForgotPassword = ({ navigation }) => {
             placeholderTextColor="#7C7C7C"
             style={{
               justifyContent: "center",
+              alignItems: "center",
               flexDirection: "row",
               width: "100%",
               height: 48,
               backgroundColor: "#E9E9E9",
               borderRadius: 8,
               paddingLeft: 40,
-              marginTop: 5,
             }}
           />
         </View>
@@ -170,6 +170,8 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 48,
     alignItems: "center",
+    alignContent: "center",
+    marginTop: 5,
   },
   iconCircle: {
     width: 27,
@@ -181,6 +183,5 @@ const styles = StyleSheet.create({
     position: "absolute",
     zIndex: 1,
     marginLeft: 5,
-    marginTop: 5,
   },
 });
