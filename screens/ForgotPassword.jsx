@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Animated, Easing } from "react-native";
+import { StyleSheet, Text, View, Animated, Easing, Image } from "react-native";
 import React, { useRef, useEffect } from "react";
 import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -36,9 +36,9 @@ const ForgotPassword = ({ navigation }) => {
         >
           <Ionicons name="chevron-back-outline" size={24} color="black" />
         </Pressable>
-        <Text style={styles.headerText}>Login Account</Text>
+        <Text style={styles.headerText}>Forgot Password</Text>
         <Text style={styles.subText}>
-          Please Enter Email to proceed forgot password
+          Please Enter Email for forgot password
         </Text>
 
         {/* Back Circle (Animated) */}
@@ -47,7 +47,12 @@ const ForgotPassword = ({ navigation }) => {
             style={[styles.circle, { transform: [{ scale: scaleAnim }] }]}
           />
           {/* Front Circle (Static) */}
-          <View style={[styles.circle, styles.frontCircle]} />
+          <View style={[styles.circle, styles.frontCircle]}>
+            <Image
+              source={require("../assets/appIcon/Lock.png")}
+              style={styles.lock}
+            />
+          </View>
         </View>
       </View>
     </View>
@@ -89,7 +94,7 @@ const styles = StyleSheet.create({
   circleContainer: {
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "40%",
+    marginTop: "30%",
   },
   circle: {
     width: 115, // Size of both circles
@@ -104,5 +109,7 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: "#92499C", // Front circle color
     position: "absolute",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
