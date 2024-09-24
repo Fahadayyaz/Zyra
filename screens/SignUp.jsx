@@ -51,7 +51,6 @@ const SignUP = ({ navigation }) => {
           {/* Name, Email, Phone & Password section */}
           <View
             style={{
-              backgroundColor: "pink",
               marginTop: "10%",
             }}
           >
@@ -114,7 +113,36 @@ const SignUP = ({ navigation }) => {
                 }}
               />
             </View>
-
+            {/* Phone goes here */}
+            <Text
+              style={{
+                fontFamily: "PlusJakartaSans_Medium",
+                fontSize: 12,
+                color: "#26252B",
+                marginTop: 15,
+              }}
+            >
+              Phone
+            </Text>
+            <View style={styles.emailInputContainer}>
+              <View style={styles.iconCircle}>
+                <Image
+                  source={require("./../assets/appIcon/ReceiverIcon.png")}
+                  style={{ width: 12, height: 12 }}
+                />
+              </View>
+              <TextInput
+                placeholder="Enter your phone"
+                placeholderTextColor="#7C7C7C"
+                style={{
+                  width: "100%",
+                  height: 48,
+                  backgroundColor: "#E9E9E9",
+                  borderRadius: 8,
+                  paddingLeft: 40,
+                }}
+              />
+            </View>
             {/* Password section goes here */}
             <Text
               style={{
@@ -146,7 +174,39 @@ const SignUP = ({ navigation }) => {
                 }}
               />
             </View>
+            {/* Confirm Password goes here */}
+            <Text
+              style={{
+                fontFamily: "PlusJakartaSans_Medium",
+                fontSize: 12,
+                color: "#26252B",
+                marginTop: 15,
+              }}
+            >
+              Confirm Password
+            </Text>
+            <View style={styles.passwordInputContainer}>
+              <View style={styles.iconCircle}>
+                <Image
+                  source={require("./../assets/appIcon/LockIcon.png")}
+                  style={{ width: 11, height: 14 }}
+                />
+              </View>
+              <TextInput
+                placeholder="Enter your password"
+                placeholderTextColor="#7C7C7C"
+                secureTextEntry={true}
+                style={{
+                  width: "100%",
+                  height: 48,
+                  backgroundColor: "#E9E9E9",
+                  borderRadius: 8,
+                  paddingLeft: 40,
+                }}
+              />
+            </View>
           </View>
+
           {/* Sign In Button */}
           <Pressable
             style={{
@@ -221,7 +281,10 @@ const SignUP = ({ navigation }) => {
             }}
           >
             <View style={styles.socialCircles}>
-              <Image source={require("./../assets/appIcon/facebookIcon.png")} />
+              <Image
+                source={require("./../assets/appIcon/facebookIcon.png")}
+                style={{ width: 6, height: 11.79 }}
+              />
             </View>
             <Text
               style={{
@@ -247,7 +310,10 @@ const SignUP = ({ navigation }) => {
             }}
           >
             <View style={styles.socialCircles}>
-              <Image source={require("./../assets/appIcon/GoogleIcon.png")} />
+              <Image
+                source={require("./../assets/appIcon/GoogleIcon.png")}
+                style={{ width: 12, height: 12 }}
+              />
             </View>
             <Text
               style={{
@@ -273,7 +339,10 @@ const SignUP = ({ navigation }) => {
             }}
           >
             <View style={styles.socialCircles}>
-              <Image source={require("./../assets/appIcon/AppleIcon.png")} />
+              <Image
+                source={require("./../assets/appIcon/AppleIcon.png")}
+                // style={{ width: 9, height: 11.03 }}
+              />
             </View>
             <Text
               style={{
