@@ -170,7 +170,7 @@ const SignUP = ({ navigation }) => {
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
-              marginTop: 10,
+              marginTop: "5%",
             }}
           >
             <Text
