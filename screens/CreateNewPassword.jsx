@@ -60,31 +60,34 @@ const CreateNewPassword = ({ navigation }) => {
             />
           </View>
         </View>
+        {/* Password section goes here */}
         <Text
           style={{
             fontFamily: "PlusJakartaSans_Medium",
             fontSize: 12,
             color: "#26252B",
+            marginTop: 15,
           }}
         >
-          Email
+          Create New Password
         </Text>
-        <View style={styles.emailInputContainer}>
+        <View style={styles.passwordInputContainer}>
           <View style={styles.iconCircle}>
-            <Image source={require("./../assets/appIcon/mailIcon.png")} />
+            <Image source={require("./../assets/appIcon/LockIcon.png")} />
           </View>
           <TextInput
-            placeholder="Enter your email"
+            placeholder="Enter your password"
             placeholderTextColor="#7C7C7C"
+            secureTextEntry={true}
             style={{
               justifyContent: "center",
+              alignItems: "center",
               flexDirection: "row",
               width: "100%",
               height: 48,
               backgroundColor: "#E9E9E9",
               borderRadius: 8,
               paddingLeft: 40,
-              marginTop: 5,
             }}
           />
         </View>
@@ -163,11 +166,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  emailInputContainer: {
+  passwordInputContainer: {
     flexDirection: "row",
     width: "100%",
     height: 48,
     alignItems: "center",
+    alignContent: "center",
+    marginTop: 5,
   },
   iconCircle: {
     width: 27,
@@ -179,6 +184,5 @@ const styles = StyleSheet.create({
     position: "absolute",
     zIndex: 1,
     marginLeft: 5,
-    marginTop: 5,
   },
 });
