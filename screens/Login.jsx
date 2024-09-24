@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, Pressable, Image } from "react-native";
+
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { StatusBar } from "expo-status-bar";
 import { TextInput } from "react-native-gesture-handler";
 
 const Login = ({ navigation }) => {
+  const [isRemembered, setIsRemembered] = useState(false);
+  const toggleRemember = () => {
+    setIsRemembered(!isRemembered);
+  };
+
   return (
     <View style={styles.mainContainer}>
       <StatusBar style="auto" />
@@ -111,31 +117,47 @@ const Login = ({ navigation }) => {
               marginTop: 8,
             }}
           >
-            <Pressable style={styles.checkBox}></Pressable>
-            <Text
+            <View
               style={{
-                color: "#7C7C7C",
-                marginLeft: 10,
-                fontFamily: "PlusJakartaSans_Regular",
-                fontSize: 12,
+                flexDirection: "row",
+                alignItems: "center",
+                alignSelf: "center",
+                width: "100%",
               }}
             >
-              Save Password
-            </Text>
-            <Pressable
-              style={{ width: "65%", alignItems: "flex-end" }}
-              onPress={() => navigation.navigate("ForgotPassword")}
-            >
+              <Pressable
+                onPress={toggleRemember}
+                style={({ pressed }) => [
+                  styles.circle,
+                  isRemembered && styles.circleClicked,
+                  pressed && { backgroundColor: "lightgray" },
+                ]}
+              >
+                {isRemembered && <Text style={styles.tick}>✓</Text>}
+              </Pressable>
               <Text
                 style={{
-                  color: "#92499C",
-                  fontFamily: "PlusJakartaSans_Regular",
-                  fontSize: 12,
+                  color: "#91929F",
+                  paddingLeft: "3%",
                 }}
               >
-                Forgot Password?
+                Save Password
               </Text>
-            </Pressable>
+              <Pressable
+                style={{ marginLeft: "30%", alignItems: "flex-end" }}
+                onPress={() => navigation.navigate("ForgotPassword")}
+              >
+                <Text
+                  style={{
+                    color: "#92499C",
+                    fontFamily: "PlusJakartaSans_Regular",
+                    fontSize: 12,
+                  }}
+                >
+                  Forgot Password?
+                </Text>
+              </Pressable>
+            </View>
           </View>
         </View>
         {/* Sign In Button */}
@@ -319,14 +341,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
     marginLeft: 5,
   },
-  checkBox: {
-    width: 14,
-    height: 14,
-    borderWidth: 1,
-    borderRadius: 1,
-    borderColor: "#D2D2D2",
-    marginTop: 2,
-  },
+
   line: {
     flex: 1,
     height: 1,
@@ -344,6 +359,24 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 27,
+  },
+  circle: {
+    width: 18,
+    height: 18,
+    borderWidth: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f1f1f1",
+    borderColor: "#92499C",
+    alignItems: "center",
+    borderRadius: 5,
+  },
+  circleClicked: {
+    backgroundColor: "#E9E9E9",
+  },
+  tick: {
+    fontSize: 14,
+    color: "#92499C",
   },
 });
 
