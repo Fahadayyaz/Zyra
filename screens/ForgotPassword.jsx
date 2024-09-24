@@ -73,7 +73,10 @@ const ForgotPassword = ({ navigation }) => {
         </Text>
         <View style={styles.emailInputContainer}>
           <View style={styles.iconCircle}>
-            <Image source={require("./../assets/appIcon/mailIcon.png")} />
+            <Image
+              source={require("./../assets/appIcon/mailIcon.png")}
+              style={{ width: 12, height: 12 }}
+            />
           </View>
           <TextInput
             placeholder="Enter your email"
