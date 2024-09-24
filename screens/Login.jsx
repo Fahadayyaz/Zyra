@@ -312,7 +312,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     width: "90%",
     height: "100%",
-    marginTop: "10%",
+    paddingTop: "10%",
     alignSelf: "center",
   },
   emailInputContainer: {
