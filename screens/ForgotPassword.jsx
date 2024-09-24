@@ -58,7 +58,7 @@ const ForgotPassword = ({ navigation }) => {
           <View style={[styles.circle, styles.frontCircle]}>
             <Image
               source={require("../assets/appIcon/Lock.png")}
-              style={styles.lock}
+              style={{ width: 27.34, height: 37.55 }}
             />
           </View>
         </View>
@@ -75,7 +75,7 @@ const ForgotPassword = ({ navigation }) => {
           <View style={styles.iconCircle}>
             <Image
               source={require("./../assets/appIcon/mailIcon.png")}
-              style={{ width: 12, height: 12 }}
+              style={{ width: 12.25, height: 9.8 }}
             />
           </View>
           <TextInput
