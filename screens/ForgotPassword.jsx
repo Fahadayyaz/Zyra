@@ -1,4 +1,12 @@
-import { StyleSheet, Text, View, Animated, Easing, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Animated,
+  Easing,
+  Image,
+  TextInput,
+} from "react-native";
 import React, { useRef, useEffect } from "react";
 import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -54,6 +62,48 @@ const ForgotPassword = ({ navigation }) => {
             />
           </View>
         </View>
+        <Text
+          style={{
+            fontFamily: "PlusJakartaSans_Medium",
+            fontSize: 12,
+            color: "#26252B",
+          }}
+        >
+          Email
+        </Text>
+        <View style={styles.emailInputContainer}>
+          <View style={styles.iconCircle}>
+            <Image source={require("./../assets/appIcon/mailIcon.png")} />
+          </View>
+          <TextInput
+            placeholder="Enter your email"
+            placeholderTextColor="#7C7C7C"
+            style={{
+              width: "100%",
+              height: 48,
+              backgroundColor: "#E9E9E9",
+              borderRadius: 8,
+              paddingLeft: 40,
+            }}
+          />
+        </View>
+        <Pressable
+          style={{
+            backgroundColor: "#92499C",
+            width: "100%",
+            height: 48,
+            borderRadius: 8,
+            justifyContent: "center",
+            alignItems: "center",
+            position: "absolute",
+            bottom: 0,
+          }}
+          onPress={() => navigation.navigate("Home")}
+        >
+          <Text style={{ color: "#fff", fontFamily: "PlusJakartaSans_Bold" }}>
+            Next
+          </Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -70,7 +120,7 @@ const styles = StyleSheet.create({
     width: "90%",
     height: "100%",
     alignSelf: "center",
-    marginTop: "10%",
+    paddingTop: "10%",
   },
   backButton: {
     width: 37,
@@ -92,9 +142,10 @@ const styles = StyleSheet.create({
     color: "#9D9D9D",
   },
   circleContainer: {
-    justifyContent: "center",
     alignItems: "center",
-    marginTop: "30%",
+    justifyContent: "center",
+    height: "25%",
+    backgroundColor: "red",
   },
   circle: {
     width: 115, // Size of both circles
@@ -111,5 +162,22 @@ const styles = StyleSheet.create({
     position: "absolute",
     justifyContent: "center",
     alignItems: "center",
+  },
+  emailInputContainer: {
+    flexDirection: "row",
+    width: "100%",
+    height: 48,
+    alignItems: "center",
+  },
+  iconCircle: {
+    width: 27,
+    height: 27,
+    backgroundColor: "#f5f5f5",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 27,
+    position: "absolute",
+    zIndex: 1,
+    marginLeft: 5,
   },
 });
