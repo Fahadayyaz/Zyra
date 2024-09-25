@@ -132,11 +132,10 @@ const CreateNewPassword = ({ navigation }) => {
             backgroundColor: "#92499C",
             width: "100%",
             height: 48,
+            marginTop: "25%",
             borderRadius: 8,
             justifyContent: "center",
             alignItems: "center",
-            position: "absolute",
-            bottom: "20%",
           }}
           onPress={() => navigation.navigate("Login")}
         >
@@ -190,7 +189,6 @@ const styles = StyleSheet.create({
     height: 115,
     borderRadius: 100,
     backgroundColor: "rgba(146, 73, 156, 0.2)", // Back circle color
-    position: "absolute",
   },
   frontCircle: {
     width: 115, // Smaller front circle
