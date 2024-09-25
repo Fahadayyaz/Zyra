@@ -11,6 +11,7 @@ import React, { useRef, useEffect } from "react";
 import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Pressable } from "react-native-gesture-handler";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const ForgotPassword = ({ navigation }) => {
   const scaleAnim = useRef(new Animated.Value(1)).current;
@@ -35,7 +36,7 @@ const ForgotPassword = ({ navigation }) => {
   }, [scaleAnim]);
 
   return (
-    <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.mainContainer}>
       <ExpoStatusBar style="auto" />
       <View style={styles.contentContainer}>
         <Pressable
@@ -104,14 +105,14 @@ const ForgotPassword = ({ navigation }) => {
             position: "absolute",
             bottom: "20%",
           }}
-          onPress={() => navigation.navigate("CreateNewPassword")}
+          onPress={() => navigation.navigate("OtpVerification")}
         >
           <Text style={{ color: "#fff", fontFamily: "PlusJakartaSans_Bold" }}>
             Next
           </Text>
         </Pressable>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -126,7 +127,6 @@ const styles = StyleSheet.create({
     width: "90%",
     height: "100%",
     alignSelf: "center",
-    paddingTop: "10%",
   },
   backButton: {
     width: 37,
