@@ -99,7 +99,7 @@ const ForgotPassword = ({ navigation }) => {
             backgroundColor: "#92499C",
             width: "100%",
             height: 48,
-            marginTop: "25%",
+            marginTop: "50%",
             borderRadius: 8,
             justifyContent: "center",
             alignItems: "center",
