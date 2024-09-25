@@ -182,7 +182,8 @@ const styles = StyleSheet.create({
   circleContainer: {
     alignItems: "center",
     justifyContent: "center",
-    height: "25%",
+    height: "18%",
+    marginTop: "15%",
   },
   circle: {
     width: 115, // Size of both circles
