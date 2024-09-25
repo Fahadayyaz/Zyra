@@ -81,10 +81,20 @@ const OtpVerification = ({ navigation }) => {
         </View>
         {/* Next button here */}
         <Pressable
-          style={styles.nextButton}
+          style={{
+            backgroundColor: "#92499C",
+            width: "100%",
+            height: 48,
+            marginTop: "25%",
+            borderRadius: 8,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
           onPress={() => navigation.navigate("CreateNewPassword")}
         >
-          <Text style={styles.nextButtonText}>Next</Text>
+          <Text style={{ color: "#fff", fontFamily: "PlusJakartaSans_Bold" }}>
+            Next
+          </Text>
         </Pressable>
         {/* resend option here */}
         <Pressable
@@ -185,7 +195,7 @@ const styles = StyleSheet.create({
   otpContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 20,
+    marginTop: 12,
     alignSelf: "center",
     width: "80%",
   },
@@ -200,19 +210,7 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins_Medium",
     color: "#000",
   },
-  nextButton: {
-    backgroundColor: "#92499C",
-    width: "100%",
-    height: 48,
-    marginTop: "25%",
-    borderRadius: 8,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  nextButtonText: {
-    color: "#fff",
-    fontFamily: "PlusJakartaSans_Bold",
-  },
+
   bottomContainer: {
     justifyContent: "flex-end",
     marginBottom: 30,
