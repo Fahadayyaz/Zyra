@@ -260,7 +260,7 @@ const SignUP = ({ navigation }) => {
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
-              marginTop: "15%",
+              marginTop: "10%",
               marginBottom: "10%",
             }}
           >
@@ -268,92 +268,94 @@ const SignUP = ({ navigation }) => {
             <Text style={styles.text}>Or</Text>
             <View style={styles.line} />
           </View>
-          <View
-            style={{
-              flexDirection: "row",
-              width: "100%",
-              height: 48,
-              backgroundColor: "#E9E9E9",
-              borderRadius: 8,
-              alignItems: "center",
-              marginTop: 15,
-              paddingLeft: "25%",
-            }}
-          >
-            <View style={styles.socialCircles}>
-              <Image
-                source={require("./../assets/appIcon/facebookIcon.png")}
-                style={{ width: 6, height: 11.79 }}
-              />
-            </View>
-            <Text
+          <View style={{ bottom: 30 }}>
+            <View
               style={{
-                fontFamily: "PlusJakartaSans_Regular",
-                marginLeft: 10,
-                color: "#7C7C7C",
-                fontSize: 12,
+                flexDirection: "row",
+                width: "100%",
+                height: 48,
+                backgroundColor: "#E9E9E9",
+                borderRadius: 8,
+                alignItems: "center",
+                marginTop: 15,
+                paddingLeft: "25%",
               }}
             >
-              Continue with facebook
-            </Text>
-          </View>
-          <View
-            style={{
-              flexDirection: "row",
-              width: "100%",
-              height: 48,
-              backgroundColor: "#E9E9E9",
-              borderRadius: 8,
-              alignItems: "center",
-              marginTop: 15,
-              paddingLeft: "25%",
-            }}
-          >
-            <View style={styles.socialCircles}>
-              <Image
-                source={require("./../assets/appIcon/GoogleIcon.png")}
-                style={{ width: 12, height: 12 }}
-              />
+              <View style={styles.socialCircles}>
+                <Image
+                  source={require("./../assets/appIcon/facebookIcon.png")}
+                  style={{ width: 6, height: 11.79 }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontFamily: "PlusJakartaSans_Regular",
+                  marginLeft: 10,
+                  color: "#7C7C7C",
+                  fontSize: 12,
+                }}
+              >
+                Continue with facebook
+              </Text>
             </View>
-            <Text
+            <View
               style={{
-                fontFamily: "PlusJakartaSans_Regular",
-                marginLeft: 10,
-                color: "#7C7C7C",
-                fontSize: 12,
+                flexDirection: "row",
+                width: "100%",
+                height: 48,
+                backgroundColor: "#E9E9E9",
+                borderRadius: 8,
+                alignItems: "center",
+                marginTop: 15,
+                paddingLeft: "25%",
               }}
             >
-              Continue with Google
-            </Text>
-          </View>
-          <View
-            style={{
-              flexDirection: "row",
-              width: "100%",
-              height: 48,
-              backgroundColor: "#E9E9E9",
-              borderRadius: 8,
-              alignItems: "center",
-              marginTop: 15,
-              paddingLeft: "25%",
-            }}
-          >
-            <View style={styles.socialCircles}>
-              <Image
-                source={require("./../assets/appIcon/AppleIcon.png")}
-                style={{ width: 9, height: 11.03 }}
-              />
+              <View style={styles.socialCircles}>
+                <Image
+                  source={require("./../assets/appIcon/GoogleIcon.png")}
+                  style={{ width: 12, height: 12 }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontFamily: "PlusJakartaSans_Regular",
+                  marginLeft: 10,
+                  color: "#7C7C7C",
+                  fontSize: 12,
+                }}
+              >
+                Continue with Google
+              </Text>
             </View>
-            <Text
+            <View
               style={{
-                fontFamily: "PlusJakartaSans_Regular",
-                marginLeft: 10,
-                color: "#7C7C7C",
-                fontSize: 12,
+                flexDirection: "row",
+                width: "100%",
+                height: 48,
+                backgroundColor: "#E9E9E9",
+                borderRadius: 8,
+                alignItems: "center",
+                marginTop: 15,
+                paddingLeft: "25%",
               }}
             >
-              Continue with Apple
-            </Text>
+              <View style={styles.socialCircles}>
+                <Image
+                  source={require("./../assets/appIcon/AppleIcon.png")}
+                  style={{ width: 9, height: 11.03 }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontFamily: "PlusJakartaSans_Regular",
+                  marginLeft: 10,
+                  color: "#7C7C7C",
+                  fontSize: 12,
+                }}
+              >
+                Continue with Apple
+              </Text>
+            </View>
           </View>
         </View>
       </ScrollView>
