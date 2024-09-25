@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Pressable, Image } from "react-native";
-
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { StatusBar } from "expo-status-bar";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignUP = ({ navigation }) => {
   const [isRemembered, setIsRemembered] = useState(false);
@@ -12,7 +12,7 @@ const SignUP = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.mainContainer}>
       <StatusBar style="auto" />
       <ScrollView>
         <View style={styles.contentContainer}>
@@ -359,7 +359,7 @@ const SignUP = ({ navigation }) => {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -371,7 +371,6 @@ const styles = StyleSheet.create({
   contentContainer: {
     width: "90%",
     height: "100%",
-    paddingTop: "10%",
     alignSelf: "center",
   },
   nameInputContainer: {
