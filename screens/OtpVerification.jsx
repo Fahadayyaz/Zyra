@@ -45,11 +45,8 @@ const OtpVerification = ({ navigation }) => {
         >
           <Ionicons name="chevron-back-outline" size={24} color="black" />
         </Pressable>
-        <Text style={styles.headerText}>Forgot Password</Text>
-        <Text style={styles.subText}>
-          Please Enter Email for forgot password
-        </Text>
-
+        <Text style={styles.headerText}>Verification</Text>
+        <Text style={styles.subText}>Please Check Your Phone Number</Text>
         {/* Back Circle (Animated) */}
         <View style={styles.circleContainer}>
           <Animated.View
@@ -64,7 +61,6 @@ const OtpVerification = ({ navigation }) => {
           </View>
         </View>
         {/* circles end here */}
-
         <View style={{ alignSelf: "center" }}>
           <Text
             style={{
@@ -79,31 +75,56 @@ const OtpVerification = ({ navigation }) => {
             We have sent the code in +923456789101
           </Text>
         </View>
-
+        {/* OTP input component */}
+        <View style={{ alignSelf: "center", marginTop: "10%" }}>
+          <OtpInput />
+        </View>
         {/* Next button here */}
         <Pressable
-          style={{
-            backgroundColor: "#92499C",
-            width: "100%",
-            height: 48,
-            borderRadius: 8,
-            justifyContent: "center",
-            alignItems: "center",
-            position: "absolute",
-            bottom: "20%",
-          }}
-          onPress={() => navigation.navigate("OtpVerification")}
+          style={styles.nextButton}
+          onPress={() => navigation.navigate("CreateNewPassword")}
         >
-          <Text style={{ color: "#fff", fontFamily: "PlusJakartaSans_Bold" }}>
-            Next
-          </Text>
+          <Text style={styles.nextButtonText}>Next</Text>
         </Pressable>
         {/* resend option here */}
+        <Pressable
+          style={styles.resendContainer}
+          onPress={() => navigation.navigate("")}
+        >
+          <Text style={styles.subText}>Didn't receive the email OTP?</Text>
+          <Text style={styles.resendText}>Resend</Text>
+        </Pressable>
       </View>
-      <Pressable style={{ position: "absolute", alignSelf: "center" }}>
-        <Text style={{ backgroundColor: "red" }}>Didn't receive the OTP </Text>
-      </Pressable>
     </SafeAreaView>
+  );
+};
+
+const OtpInput = () => {
+  const inputRefs = useRef([]);
+
+  const handleTextChange = (text, index) => {
+    if (text) {
+      if (index < 3) {
+        inputRefs.current[index + 1].focus(); // Move to next box
+      }
+    } else if (text === "" && index > 0) {
+      inputRefs.current[index - 1].focus(); // Move to previous box if empty
+    }
+  };
+
+  return (
+    <View style={styles.otpContainer}>
+      {[0, 1, 2, 3].map((_, index) => (
+        <TextInput
+          key={index}
+          ref={(ref) => (inputRefs.current[index] = ref)} // Assigning ref for each input
+          style={styles.otpBox}
+          keyboardType="number-pad"
+          maxLength={1} // Only one character allowed per box
+          onChangeText={(text) => handleTextChange(text, index)}
+        />
+      ))}
+    </View>
   );
 };
 
@@ -115,8 +136,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#f1f1f1",
   },
   contentContainer: {
+    flex: 1,
     width: "90%",
-    height: "100%",
     alignSelf: "center",
   },
   backButton: {
@@ -142,22 +163,71 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     height: "18%",
-    marginTop: "8%",
+    marginTop: "15%",
   },
   circle: {
-    width: 115, // Size of both circles
+    width: 115,
     height: 115,
     borderRadius: 100,
-    backgroundColor: "rgba(146, 73, 156, 0.2)", // Back circle color
-    position: "absolute",
+    zIndex: 1,
+    backgroundColor: "rgba(146, 73, 156, 0.2)",
   },
   frontCircle: {
-    width: 115, // Smaller front circle
+    width: 115,
     height: 115,
     borderRadius: 100,
-    backgroundColor: "#92499C", // Front circle color
     position: "absolute",
+    backgroundColor: "#92499C",
     justifyContent: "center",
     alignItems: "center",
+    zIndex: 2,
+  },
+  otpContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 20,
+    alignSelf: "center",
+    width: "80%",
+  },
+  otpBox: {
+    width: 60,
+    height: 60,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#92499C",
+    textAlign: "center",
+    fontSize: 24,
+    fontFamily: "Poppins_Medium",
+    color: "#000",
+  },
+  nextButton: {
+    backgroundColor: "#92499C",
+    width: "100%",
+    height: 48,
+    marginTop: "25%",
+    borderRadius: 8,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  nextButtonText: {
+    color: "#fff",
+    fontFamily: "PlusJakartaSans_Bold",
+  },
+  bottomContainer: {
+    justifyContent: "flex-end",
+    marginBottom: 30,
+  },
+  resendContainer: {
+    height: 20,
+    marginTop: 15,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  resendText: {
+    fontFamily: "PlusJakartaSans_Bold",
+    fontSize: 12,
+    color: "#92499C",
+    marginLeft: 5,
   },
 });
