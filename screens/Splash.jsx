@@ -3,10 +3,11 @@ import { View, StyleSheet, Image, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Splash = ({ navigation }) => {
   return (
-    <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.mainContainer}>
       <StatusBar style="auto" />
       <View style={styles.contentContainer}>
         <Image
@@ -63,7 +64,7 @@ const Splash = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -77,7 +78,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     alignItems: "center",
-    marginTop: "10%",
   },
   logo: {
     width: 100,
