@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { StatusBar } from "expo-status-bar";
 import { TextInput } from "react-native-gesture-handler";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Login = ({ navigation }) => {
   const [isRemembered, setIsRemembered] = useState(false);
@@ -12,7 +13,7 @@ const Login = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.mainContainer}>
       <StatusBar style="auto" />
       <View style={styles.contentContainer}>
         <Pressable
@@ -315,7 +316,7 @@ const Login = ({ navigation }) => {
           </Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -327,7 +328,6 @@ const styles = StyleSheet.create({
   contentContainer: {
     width: "90%",
     height: "100%",
-    paddingTop: "10%",
     alignSelf: "center",
   },
   emailInputContainer: {
