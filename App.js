@@ -10,6 +10,10 @@ import SignUp from "./screens/SignUp";
 import ForgotPassword from "./screens/ForgotPassword";
 import CreateNewPassword from "./screens/CreateNewPassword";
 import Home from "./screens/Home";
+import Submissions from "./screens/Submissions";
+
+import ContactUs from "./screens/ContactUs";
+import TermsAndConditions from "./screens/TermsAndConditions";
 import OtpVerification from "./screens/OtpVerification";
 
 const Stack = createStackNavigator();
@@ -37,6 +41,13 @@ export default function App() {
         <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Submissions" component={Submissions} />
+
+        <Stack.Screen name="ContactUs" component={ContactUs} />
+        <Stack.Screen
+          name="TermsAndConditions"
+          component={TermsAndConditions}
+        />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         <Stack.Screen name="OtpVerification" component={OtpVerification} />
