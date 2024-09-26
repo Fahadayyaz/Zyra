@@ -33,7 +33,7 @@ export default function ContactUs() {
         <Text
           style={{
             fontSize: responsiveFontSize(28),
-            fontFamily: "medium",
+            fontFamily: "Poppins_Medium",
             marginTop: responsiveHeight(30),
           }}
         >
@@ -43,7 +43,8 @@ export default function ContactUs() {
           <Text
             style={{
               marginTop: responsiveHeight(30),
-              fontFamily: "medium",
+              fontFamily: "PlusJakartaSans_Medium",
+              fontSize: 12,
             }}
           >
             Name
@@ -51,7 +52,7 @@ export default function ContactUs() {
           <View style={styles.inputContainer}>
             <Pressable style={styles.iconContainer}>
               <Image
-                source={require("../assets/icons/name.png")}
+                source={require("./../assets/appIcon/ProfileOrNameIcon.png")}
                 style={styles.inputIcon}
               />
             </Pressable>
@@ -69,7 +70,8 @@ export default function ContactUs() {
           <Text
             style={{
               marginTop: responsiveHeight(30),
-              fontFamily: "medium",
+              fontFamily: "PlusJakartaSans_Medium",
+              fontSize: 12,
             }}
           >
             Last Name
@@ -77,7 +79,7 @@ export default function ContactUs() {
           <View style={styles.inputContainer}>
             <Pressable style={styles.iconContainer}>
               <Image
-                source={require("../assets/icons/name.png")}
+                source={require("./../assets/appIcon/ProfileOrNameIcon.png")}
                 style={styles.inputIcon}
               />
             </Pressable>
@@ -95,7 +97,8 @@ export default function ContactUs() {
           <Text
             style={{
               marginTop: responsiveHeight(30),
-              fontFamily: "medium",
+              fontFamily: "PlusJakartaSans_Medium",
+              fontSize: 12,
             }}
           >
             Email
@@ -103,7 +106,7 @@ export default function ContactUs() {
           <View style={styles.inputContainer}>
             <Pressable style={styles.iconContainer}>
               <Image
-                source={require("../assets/icons/email.png")}
+                source={require("./../assets/appIcon/mailIcon.png")}
                 style={styles.inputIcon}
               />
             </Pressable>
@@ -121,7 +124,8 @@ export default function ContactUs() {
           <Text
             style={{
               marginTop: responsiveHeight(30),
-              fontFamily: "medium",
+              fontFamily: "PlusJakartaSans_Medium",
+              fontSize: 12,
             }}
           >
             Phone
@@ -129,7 +133,7 @@ export default function ContactUs() {
           <View style={styles.inputContainer}>
             <Pressable style={styles.iconContainer}>
               <Image
-                source={require("../assets/icons/phone.png")}
+                source={require("./../assets/appIcon/ReceiverIcon.png")}
                 style={styles.inputIcon}
               />
             </Pressable>
@@ -147,22 +151,26 @@ export default function ContactUs() {
           <Text
             style={{
               marginTop: responsiveHeight(20),
-              fontFamily: "medium",
+              fontFamily: "PlusJakartaSans_Medium",
+              fontSize: 12,
             }}
           >
             Message
           </Text>
-          <View style={[styles.inputContainer, { height: 100 }]}>
+          <View style={[styles.inputContainer, { height: 150 }]}>
             <TextInput
               placeholder="Type here"
-              style={[styles.descInput, { paddingLeft: 10, height: 100 }]}
+              style={[styles.descInput, { paddingLeft: 10, height: 150 }]}
               placeholderTextColor={"#7C7C7C"}
               multiline={true}
               cursorColor={"#92499C"}
             />
           </View>
         </View>
-        <Pressable style={styles.buttonContainer}>
+        <Pressable
+          style={styles.buttonContainer}
+          onPress={() => navigation.navigate("Home")}
+        >
           <Text style={styles.buttonText}>Submit</Text>
         </Pressable>
       </View>
@@ -181,6 +189,7 @@ const styles = StyleSheet.create({
   },
   input: {
     fontSize: responsiveFontSize(12),
+    fontFamily: "PlusJakartaSans_Regular",
     flex: 1,
     borderRadius: 8,
     color: "#000",
@@ -209,6 +218,7 @@ const styles = StyleSheet.create({
   },
   descInput: {
     fontSize: responsiveFontSize(12),
+    fontFamily: "PlusJakartaSans_Regular",
     flex: 1,
     borderRadius: 8,
     color: "#000",
@@ -227,7 +237,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 14,
-    fontFamily: "regular",
+    fontFamily: "PlusJakartaSans_Bold",
     color: "#ffff",
   },
 });
