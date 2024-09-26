@@ -10,7 +10,7 @@ import {
 import React, { useRef, useEffect } from "react";
 import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Pressable } from "react-native-gesture-handler";
+import { Pressable, ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const OtpVerification = ({ navigation }) => {
@@ -38,7 +38,10 @@ const OtpVerification = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <ExpoStatusBar style="auto" />
-      <View style={styles.contentContainer}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={styles.contentContainer}
+      >
         <Pressable
           style={styles.backButton}
           onPress={() => navigation.goBack()}
@@ -67,6 +70,7 @@ const OtpVerification = ({ navigation }) => {
               fontFamily: "Poppins_Medium",
               fontSize: 28,
               color: "#000000",
+              marginTop: 20,
             }}
           >
             Verification code
@@ -104,7 +108,7 @@ const OtpVerification = ({ navigation }) => {
           <Text style={styles.subText}>Didn't receive the email OTP?</Text>
           <Text style={styles.resendText}>Resend</Text>
         </Pressable>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
