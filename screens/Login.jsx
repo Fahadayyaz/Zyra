@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { StatusBar } from "expo-status-bar";
-import { TextInput } from "react-native-gesture-handler";
+import { ScrollView, TextInput } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Login = ({ navigation }) => {
@@ -15,7 +15,10 @@ const Login = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <StatusBar style="auto" />
-      <View style={styles.contentContainer}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={styles.contentContainer}
+      >
         <Pressable
           style={{
             width: 37,
@@ -315,7 +318,7 @@ const Login = ({ navigation }) => {
             Continue with Apple
           </Text>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
