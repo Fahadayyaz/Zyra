@@ -14,7 +14,7 @@ const SignUP = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <StatusBar style="auto" />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.contentContainer}>
           <Pressable
             style={{
