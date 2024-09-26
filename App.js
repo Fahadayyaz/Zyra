@@ -11,6 +11,7 @@ import ForgotPassword from "./screens/ForgotPassword";
 import CreateNewPassword from "./screens/CreateNewPassword";
 import Home from "./screens/Home";
 import Submissions from "./screens/Submissions";
+import SentSuccessfully from "./screens/SentSuccessfully";
 
 import ContactUs from "./screens/ContactUs";
 import TermsAndConditions from "./screens/TermsAndConditions";
@@ -41,8 +42,8 @@ export default function App() {
         <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="SentSuccessfully" component={SentSuccessfully} />
         <Stack.Screen name="Submissions" component={Submissions} />
-
         <Stack.Screen name="ContactUs" component={ContactUs} />
         <Stack.Screen
           name="TermsAndConditions"
