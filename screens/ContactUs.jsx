@@ -11,6 +11,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
+import { ScrollView } from "react-native-gesture-handler";
 
 const { width, height } = Dimensions.get("window");
 
@@ -23,7 +24,10 @@ export default function ContactUs() {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={{ backgroundColor: "#fff", flex: 1 }}>
-      <View style={{ height: "100%", width: "90%", alignSelf: "center" }}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{ height: "100%", width: "90%", alignSelf: "center" }}
+      >
         <Pressable
           style={styles.backButtonContainer}
           onPress={() => navigation.goBack()}
@@ -173,7 +177,7 @@ export default function ContactUs() {
         >
           <Text style={styles.buttonText}>Submit</Text>
         </Pressable>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
