@@ -10,7 +10,7 @@ import {
 import React, { useRef, useEffect } from "react";
 import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Pressable } from "react-native-gesture-handler";
+import { Pressable, ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const CreateNewPassword = ({ navigation }) => {
@@ -38,7 +38,10 @@ const CreateNewPassword = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <ExpoStatusBar style="auto" />
-      <View style={styles.contentContainer}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={styles.contentContainer}
+      >
         <Pressable
           style={styles.backButton}
           onPress={() => navigation.goBack()}
@@ -143,7 +146,7 @@ const CreateNewPassword = ({ navigation }) => {
             Next
           </Text>
         </Pressable>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
