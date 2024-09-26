@@ -218,7 +218,7 @@ const SignUP = ({ navigation }) => {
               alignItems: "center",
               marginTop: "15%",
             }}
-            onPress={() => navigation.navigate("Home")}
+            onPress={() => navigation.navigate("Login")}
           >
             <Text style={{ color: "#fff", fontFamily: "PlusJakartaSans_Bold" }}>
               Sign UP
