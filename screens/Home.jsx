@@ -40,70 +40,6 @@ export default function Home() {
   const [storeName, setStoreName] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const CustomAlert = ({ message, onClose }) => {
-    return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: "#f1f1f1" }}>
-        <View
-          style={{
-            width: "90%",
-            height: "100%",
-            alignSelf: "center",
-            justifyContent: "center",
-          }}
-        >
-          <View
-            style={{
-              height: responsiveHeight(250),
-              width: "100%",
-              backgroundColor: "#fff",
-              borderRadius: 33,
-              shadowColor: "#000",
-              shadowOffset: { width: 0, height: 2 },
-              shadowOpacity: 0.25,
-              shadowRadius: 3.84,
-              elevation: 5,
-            }}
-          >
-            <Image
-              source={require("./../assets/appIcon/SentSuccessfully.png")}
-              style={{
-                height: 100,
-                width: 100,
-                resizeMode: "contain",
-                alignSelf: "center",
-                marginTop: responsiveHeight(20),
-              }}
-            />
-            <Text style={{ textAlign: "center", fontSize: 24 }}>
-              Sent Successfully
-            </Text>
-            <Text style={{ textAlign: "center" }}>
-              Your request has been sent successfully
-            </Text>
-            <TouchableOpacity
-              onPress={() => {
-                onClose();
-                navigation.navigate("Home");
-              }}
-            >
-              <Text
-                style={{
-                  textAlign: "center",
-                  color: "#92499C",
-                  marginTop: responsiveHeight(27),
-                  textDecorationLine: "underline",
-                  fontFamily: "bold",
-                }}
-              >
-                Request Another
-              </Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </SafeAreaView>
-    );
-  };
-
   return (
     <View style={{ backgroundColor: "#fff", flex: 1 }}>
       {toast ? (
@@ -344,11 +280,13 @@ export default function Home() {
               </View>
 
               {/* submit button goes here */}
-              <Pressable style={styles.buttonContainer}>
-                <Text style={styles.buttonText}>
-                  {loading ? "Loading..." : "Submit"}
-                </Text>
+              <Pressable
+                style={styles.buttonContainer}
+                onPress={() => navigation.navigate("SentSuccessfully")}
+              >
+                <Text style={styles.buttonText}>Submit</Text>
               </Pressable>
+
               <Pressable
                 style={{
                   width: "70%",
