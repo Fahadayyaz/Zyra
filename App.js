@@ -12,7 +12,6 @@ import CreateNewPassword from "./screens/CreateNewPassword";
 import Home from "./screens/Home";
 import Submissions from "./screens/Submissions";
 import SentSuccessfully from "./screens/SentSuccessfully";
-
 import ContactUs from "./screens/ContactUs";
 import TermsAndConditions from "./screens/TermsAndConditions";
 import OtpVerification from "./screens/OtpVerification";
